@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Globe, Share2, Mail, Code } from 'lucide-react';
+import { X, Globe, Share2, Mail, Code } from 'lucide-react';
 import { portfolioData } from '../data';
 import { PromptShowcase } from './PromptShowcase';
 

@@ -21,7 +21,7 @@ export const FloatingItem = ({ position, label, onClick, color = '#6b21a8', text
   
   const [hovered, setHovered] = useState(false);
 
-  useFrame((state) => {
+  useFrame(() => {
     if (coreRef.current) {
       coreRef.current.rotation.y += 0.005;
       coreRef.current.rotation.x += 0.002;
