@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #0a0a0c;
+    --color-primary: #6b21a8;
+    --color-secondary: #06b6d4;
+    --color-accent: #f3f4f6;
+    --color-panel: rgba(0, 0, 0, 0.4);
+    --color-border: rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-theme='cyberpunk'] {
+    --color-bg: #050510;
+    --color-primary: #ec4899;
+    --color-secondary: #22d3ee;
+    --color-accent: #ffffff;
+    --color-panel: rgba(10, 5, 20, 0.6);
+    --color-border: rgba(236, 72, 153, 0.3);
+  }
+  
+  [data-theme='light'] {
+    --color-bg: #f8fafc;
+    --color-primary: #3b82f6;
+    --color-secondary: #10b981;
+    --color-accent: #1e293b;
+    --color-panel: rgba(255, 255, 255, 0.8);
+    --color-border: rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    @apply bg-background text-accent overflow-hidden font-sans;
+    margin: 0;
+    padding: 0;
+    cursor: none; 
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: var(--color-panel);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-secondary); }
